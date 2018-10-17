@@ -8,7 +8,7 @@ Yep, we must find a normal name for the project...
   2. [Project Description](https://github.com/Guzzur/openu-java-project#2-project-description)
   3. [Audience](https://github.com/Guzzur/openu-java-project#3-audience)
   4. [System Structure](https://github.com/Guzzur/openu-java-project#4-system-structure)
-  5. [Submitters](https://github.com/Guzzur/openu-java-project#5-system-structure)
+  5. [Submitters](https://github.com/Guzzur/openu-java-project#5-submitters)
 ## 1. Introduction
 Here comes a-few-word introduction into why and what we're doing
 ## 2. Project Description
