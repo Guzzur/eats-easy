@@ -1,4 +1,5 @@
 # openu-java-project
+Yep, we must find a normal name for the project...
 ## Introduction
 Here comes a-few-word introduction into why and what we're doing
 ## Project Description
