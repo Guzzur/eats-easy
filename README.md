@@ -1,5 +1,5 @@
-# openu-java-project
-Yep, we must find a normal name for the project...
+# Eats Easy
+
 ## Contents and links
   0. Links
   * [Issues](https://github.com/Guzzur/openu-java-project/issues)
