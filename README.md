@@ -1,14 +1,15 @@
 # Eats Easy
 
 ## Contents and links
-  0. Links
-  * [Issues](https://github.com/Guzzur/openu-java-project/issues)
-  * [System Design Description](https://github.com/Guzzur/openu-java-project/blob/master/SDD.md)
+  0. [Links](https://github.com/Guzzur/openu-java-project#0-links)
   1. [Introduction](https://github.com/Guzzur/openu-java-project#1-introduction)
   2. [Project Description](https://github.com/Guzzur/openu-java-project#2-project-description)
   3. [Audience](https://github.com/Guzzur/openu-java-project#3-audience)
   4. [System Structure](https://github.com/Guzzur/openu-java-project#4-system-structure)
   5. [Submitters](https://github.com/Guzzur/openu-java-project#5-submitters)
+## 0. Links
+  * [Issues](https://github.com/Guzzur/openu-java-project/issues)
+  * [System Design Description](https://github.com/Guzzur/openu-java-project/blob/master/SDD.md)
 ## 1. Introduction
 Here comes a-few-word introduction into why and what we're doing
 ## 2. Project Description
