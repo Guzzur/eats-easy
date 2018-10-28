@@ -39,7 +39,7 @@ target/
 **/.project
 **/.classpath
 **/.settings/
-blog/bin/
+*/blog/bin/
 **/.tern-project
 
 #IntelliJ files
