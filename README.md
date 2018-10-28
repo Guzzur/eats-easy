@@ -1,4 +1,4 @@
-# Eats Easy b
+# Eats Easy
 
 ## Contents and links
   0. [Links](https://github.com/Guzzur/openu-java-project#0-links)
