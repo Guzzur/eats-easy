@@ -9,7 +9,7 @@
   5. [Submitters](https://github.com/Guzzur/openu-java-project#5-submitters)
 ## 0. Links
   * [Issues](https://github.com/Guzzur/openu-java-project/issues)
-  * [System Design Description](https://github.com/Guzzur/openu-java-project/blob/master/SDD.md)
+  * [System Design Description](https://github.com/Guzzur/openu-java-project/blob/master/documentation/SDD.md)
 ## 1. Introduction
 Here comes a-few-word introduction into why and what we're doing
 ## 2. Project Description
