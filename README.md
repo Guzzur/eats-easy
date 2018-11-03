@@ -6,7 +6,8 @@
   2. [Project Description](https://github.com/Guzzur/openu-java-project#2-project-description)
   3. [Audience](https://github.com/Guzzur/openu-java-project#3-audience)
   4. [System Structure](https://github.com/Guzzur/openu-java-project#4-system-structure)
-  5. [Submitters](https://github.com/Guzzur/openu-java-project#5-submitters)
+  5. [API documentation](https://github.com/Guzzur/openu-java-project#5-api-documentation)
+  6. [Submitters](https://github.com/Guzzur/openu-java-project#6-submitters)
 ### 0. Links
   * [Issues](https://github.com/Guzzur/openu-java-project/issues)
   * [System Proposal](https://github.com/Guzzur/openu-java-project/blob/master/documentation/eats-easy-proposal.pdf)
@@ -26,5 +27,5 @@ Here comes the explanation of the system, connectivity, databasing etc. All that
 ### 5. API documentation
 Here comes the whole list of input/output that our API can handle
 ### 6. Submitters
-[Ron Yanku (Ron Yanku)](https://github.com/RonYanku)
-[Felix Razikov (Guzzur)](https://github.com/Guzzur)
+* [Ron Yanku (Ron Yanku)](https://github.com/RonYanku)
+* [Felix Razikov (Guzzur)](https://github.com/Guzzur)
