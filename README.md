@@ -12,9 +12,10 @@
   * [Issues](https://github.com/Guzzur/openu-java-project/issues)
   * [System Proposal](https://github.com/Guzzur/openu-java-project/blob/master/documentation/eats-easy-proposal.pdf)
   * [System Design Document](https://github.com/Guzzur/openu-java-project/blob/master/documentation/system-design-document.md)
-  * Code
-    * [Android app](https://github.com/Guzzur/eats-easy/tree/master/android-app)
+  * Repositories
+    * [Documentation](https://github.com/Guzzur/eats-easy)
     * [Backend (Java Spring Boot based)](https://github.com/Guzzur/eats-easy-spring)
+    * [Android app](https://github.com/Guzzur/eats-easy-app)
     * [Web UI (Node.js + React.js based)](https://github.com/Guzzur/eats-easy-node)
 ### 1. Introduction
 Here comes a-few-word introduction into why and what we're doing
