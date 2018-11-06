@@ -14,7 +14,7 @@
   * [API Documentation](https://github.com/Guzzur/eats-easy/blob/master/documentation/application-program-interface.md)
   * Repositories
     * [Documentation](https://github.com/Guzzur/eats-easy)
-    * [Backend (Java Spring Boot based)](https://github.com/Guzzur/eats-easy-spring)
+    * [Backend (Java Spring Boot based API)](https://github.com/Guzzur/eats-easy-spring)
     * [Android app](https://github.com/Guzzur/eats-easy-app)
     * [Web UI (Node.js + React.js based)](https://github.com/Guzzur/eats-easy-node)
 ### 1. Introduction
