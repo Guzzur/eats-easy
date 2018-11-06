@@ -6,12 +6,12 @@
   2. [Project Description](https://github.com/Guzzur/openu-java-project#2-project-description)
   3. [Audience](https://github.com/Guzzur/openu-java-project#3-audience)
   4. [System Structure](https://github.com/Guzzur/openu-java-project#4-system-structure)
-  5. [API documentation](https://github.com/Guzzur/openu-java-project#5-api-documentation)
-  6. [Submitters](https://github.com/Guzzur/openu-java-project#6-submitters)
+  5. [Submitters](https://github.com/Guzzur/openu-java-project#5-submitters)
 ### 0. Links
   * [Issues](https://github.com/Guzzur/openu-java-project/issues)
   * [System Proposal](https://github.com/Guzzur/openu-java-project/blob/master/documentation/eats-easy-proposal.pdf)
   * [System Design Document](https://github.com/Guzzur/openu-java-project/blob/master/documentation/system-design-document.md)
+  * [API Documentation](https://github.com/Guzzur/eats-easy/blob/master/documentation/application-program-interface.md)
   * Repositories
     * [Documentation](https://github.com/Guzzur/eats-easy)
     * [Backend (Java Spring Boot based)](https://github.com/Guzzur/eats-easy-spring)
@@ -63,8 +63,6 @@ Everyone who wants to be a part of modern era, where you don't need to wait for 
 - Node.js server for React.js UIs [backend]
 - Nginx (reverse proxy)
 - Docker (containerization)
-### 5. API documentation
-Here comes the whole list of input/output that our API can handle
-### 6. Submitters
+### 5. Submitters
 * [Ron Yanku (RonYanku)](https://github.com/RonYanku)
 * [Felix Razikov (Guzzur)](https://github.com/Guzzur)
