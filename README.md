@@ -55,7 +55,7 @@ Everyone who wants to be a part of modern era, where you don't need to wait for 
   * [API Documentation](/documentation/application-program-interface.md)
   * Repositories
     * [Documentation](/)
-    * [Backend (Java Spring Boot based API)](https://github.com/Guzzur/eats-easy-spring)
-    * [Clients' Android app (React Native based)](https://github.com/RonYanku/eats-easy-eaters-app)
-    * [Staff's Android app (React Native based)](https://github.com/Guzzur/eats-easy-staff-app)
-    * [Web UI (React.js based)](https://github.com/Guzzur/eats-easy-node)
+    * [Backend (Java Spring Boot based API)](https://github.com/eats-easy/eats-easy-spring)
+    * [Clients' Android app (React Native based)](https://github.com/eats-easy/eats-easy-eaters-app)
+    * [Staff's Android app (React Native based)](https://github.com/eats-easy/eats-easy-staff-app)
+    * [Web UI (React.js based)](https://github.com/eats-easy/eats-easy-web)
