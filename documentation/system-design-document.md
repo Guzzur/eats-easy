@@ -8,19 +8,34 @@ The System Design Document describes the system requirements, operating environm
 1. **INTRODUCTION**
 
     **1.1 Purpose and Scope**
-    *This section provides a brief description of the Systems Design Document’s purpose and scope.*
+    This Software Design Description (SDD) describes the detailed structure of the components of
+    the Eats Easy system that connects clients and restaurants, and the precise implementation details required to satisfy the requirements as specificted in the Project Proposal Document (PPD). It is assumed that the reader has read the PPD, since this document also defines the implementation details of the desired behaviour given the requirements within it.
 
     **1.2 Project Executive Summary**
-    *This section provides a description of the project from a management perspective and an overview of the framework within which the conceptual system design was prepared.  If appropriate, include the information discussed in the subsequent sections in the summary.*
+    The Goal of the project is to design and develop an easy-to-use system that is possible to help people to find tasty food, near to his location and according to his tastes.<br>
+    The documentation, development and testing processes shall end before February 2019.<br>
+    Project milestones:
+    * High-level design
+    * Proposal and Design documentation
+    * Server (API) development
+    * Eaters and Staff User Interface (UI) development
+    * Alpha + Testing
+    * Beta + Testing
+    * API documentation
+    * Web page, production deployment etc.<br><br>
+
+    Nearly all of technologies that are going to be used in the Project are new to a team. The learning curve may lead to a risk to stand with fully working starting setup on time. Another risk is the fact that all team members are partly "employed" in this project, which also may lead to another delays of deployment of milestones' versions.<br>
+    Project's mitigation/enhancement plan is to reduce the unnecessary parts of the Project to minimum and to concentrate on the main/core parts of the System up to the Testing phase.<br>
+    In the future, the System will be ready to next stage development up to the stage where it can be used by actual clients.
     
     **1.2.1 System Overview**
     *This section describes the system in narrative form using non-technical terms.  It should provide a high-level system architecture diagram showing a subsystem breakout of the system, if applicable.  The high-level system architecture or subsystem diagrams should, if applicable, show interfaces to external systems.  Supply a high-level context diagram for the system and subsystems, if applicable.  Refer to the requirements trace ability matrix (RTM) in the Functional Requirements Document (FRD), to identify the allocation of the functional requirements into this design document.*
 
     **1.2.2 Design Constraints**
-    *This section describes any constraints in the system design (reference any trade-off analyses conducted such, as resource use versus productivity, or conflicts with other systems) and includes any assumptions made by the project team in developing the system design.*
+    The project doesn't have any constraints or conflicts with other system due to it's standalone-ness and self-sufficiency.
 
     **1.2.3 Future Contingencies**
-    *This section describes any contingencies that might arise in the design of the system that may change the development direction.  Possibilities include lack of interface agreements with outside agencies or unstable architectures at the time this document is produced.  Address any possible workarounds or alternative plans.*
+    In next stages of development some independent services and APIs may be involved, such as network security service using SSL, payment services' APIs, map and advertising APIs and more. All these are irrelevant for current projectal stage, which desing is described in this document.
     
     **1.3 Document Organization**
     *This section describes the organization of the Systems Design Document.*
