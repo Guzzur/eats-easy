@@ -1,18 +1,18 @@
 CREATE TABLE Ingredients
 (
-  Ingredient_name INT NOT NULL,
+  Ingredient_name VARCHAR NOT NULL,
   ingredient_ID INT NOT NULL,
-  image_url INT NOT NULL,
-  description INT NOT NULL,
+  image_url VARCHAR NOT NULL,
+  description VARCHAR NOT NULL,
   PRIMARY KEY (ingredient_ID)
 );
 
 CREATE TABLE Restaurants
 (
-  name INT NOT NULL,
+  name VARCHAR NOT NULL,
   rest_ID INT NOT NULL,
   gps_point INT NOT NULL,
-  address INT NOT NULL,
+  address VARCHAR NOT NULL,
   PRIMARY KEY (rest_ID)
 );
 
@@ -20,7 +20,7 @@ CREATE TABLE Credit_cards
 (
   ID INT NOT NULL,
   number INT NOT NULL,
-  owner_name INT NOT NULL,
+  owner_name VARCHAR NOT NULL,
   cvc INT NOT NULL,
   expires_on INT NOT NULL,
   PRIMARY KEY (ID)
@@ -45,10 +45,10 @@ CREATE TABLE Restaurants_type
 CREATE TABLE Dishes
 (
   price INT NOT NULL,
-  description INT NOT NULL,
+  description VARCHAR NOT NULL,
   dish_ID INT NOT NULL,
-  dish_name INT NOT NULL,
-  image_url INT NOT NULL,
+  dish_name VARCHAR NOT NULL,
+  image_url VARCHAR NOT NULL,
   rest_ID INT NOT NULL,
   PRIMARY KEY (dish_ID),
   FOREIGN KEY (rest_ID) REFERENCES Restaurants(rest_ID)
@@ -65,8 +65,8 @@ CREATE TABLE Tables
 CREATE TABLE Shifts
 (
   shift_ID INT NOT NULL,
-  starts_at INT NOT NULL,
-  ends_at INT NOT NULL,
+  starts_at DATE NOT NULL,
+  ends_at DATE NOT NULL,
   rest_ID INT NOT NULL,
   PRIMARY KEY (shift_ID),
   FOREIGN KEY (rest_ID) REFERENCES Restaurants(rest_ID)
@@ -86,10 +86,10 @@ CREATE TABLE Stock_ingredients
 CREATE TABLE Users
 (
   user_ID INT NOT NULL,
-  email INT NOT NULL,
+  email VARCHAR NOT NULL,
   phone INT NOT NULL,
-  hashed_passwd INT NOT NULL,
-  name INT NOT NULL,
+  hashed_passwd VARCHAR NOT NULL,
+  name VARCHAR NOT NULL,
   table_ID INT NOT NULL,
   ID INT,
   PRIMARY KEY (user_ID),
@@ -100,7 +100,7 @@ CREATE TABLE Users
 CREATE TABLE Roles
 (
   role_ID INT NOT NULL,
-  role_name INT NOT NULL,
+  role_name VARCHAR NOT NULL,
   user_ID INT,
   PRIMARY KEY (role_ID, user_ID),
   FOREIGN KEY (user_ID) REFERENCES Users(user_ID)
@@ -137,9 +137,9 @@ CREATE TABLE Employees
 CREATE TABLE Orders
 (
   order_ID INT NOT NULL,
-  status INT NOT NULL,
-  time_received INT NOT NULL,
-  time_delivered INT NOT NULL,
+  status VARCHAR NOT NULL,
+  time_received DATE NOT NULL,
+  time_delivered DATE NOT NULL,
   table_ID INT NOT NULL,
   rest_ID INT NOT NULL,
   user_ID INT NOT NULL,
@@ -151,8 +151,8 @@ CREATE TABLE Orders
 
 CREATE TABLE Calls_for_waiter
 (
-  reason INT NOT NULL,
-  call_date INT NOT NULL,
+  reason VARCHAR NOT NULL,
+  call_date DATE NOT NULL,
   call_ID INT NOT NULL,
   table_ID INT NOT NULL,
   rest_ID INT NOT NULL,
@@ -165,7 +165,7 @@ CREATE TABLE Calls_for_waiter
 
 CREATE TABLE Payments
 (
-  date_accepted INT NOT NULL,
+  date_accepted DATE NOT NULL,
   amount INT NOT NULL,
   payment_ID INT NOT NULL,
   order_ID INT NOT NULL,
@@ -179,7 +179,7 @@ CREATE TABLE Payments
 
 CREATE TABLE Calls_resolved
 (
-  call_resolve_date INT NOT NULL,
+  call_resolve_date DATE NOT NULL,
   call_resolve_ID INT NOT NULL,
   employee_ID INT NOT NULL,
   user_ID INT NOT NULL,
