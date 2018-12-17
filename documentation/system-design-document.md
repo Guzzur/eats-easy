@@ -146,11 +146,11 @@ We use PosgreSQL (through Heroku) for our Database
 
 ##### Entity Relationship Diagram (ERD) ([enlarge](images/eats-easy-erd-v1.6.png))
 
-[![ERD](images/eats-easy-erd-v1.6.png)](<(images/eats-easy-erd-v1.6.png)>)
+[![ERD](images/eats-easy-erd-v1.6.png)](images/eats-easy-erd-v1.6.png)
 
 ##### Relational Schema (RS) ([enlarge](images/eats-easy-rs-v1.6.png))
 
-[![ERD](images/eats-easy-rs-v1.6.png)](<(images/eats-easy-erd-v1.6.png)>)
+[![ERD](images/eats-easy-rs-v1.6.png)](images/eats-easy-erd-v1.6.png)
 
 #### 3.2 Non-Database Management System Files
 
