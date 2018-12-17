@@ -253,34 +253,15 @@ Signs used in this section:
 
 ### 6. EXTERNAL INTERFACES
 
-_External systems are any systems that are not within the scope of the system under development, regardless whether the other systems are managed by the State or another agency. In this section, describe the electronic interface(s) between this system and each of the other systems and/or subsystem(s), emphasizing the point of view of the system being developed._
-
 #### 6.1 Interface Architecture
 
-_In this section, describe the interface(s) between the system being developed and other systems; for example, batch transfers, queries, etc. Include the interface architecture(s) being implemented, such as wide area networks, gateways, etc. Provide a diagram depicting the communications path(s) between this system and each of the other systems, which should map to the context diagrams in Section 1.2.1. If appropriate, use subsections to address each interface being implemented._
-
-#### 6.2 Interface Detailed Design
-
-_For each system that provides information exchange with the system under development, there is a requirement for rules governing the interface. This section should provide enough detailed information about the interface requirements to correctly format, transmit, and/or receive data across the interface. Include the following information in the detailed design for each interface (as appropriate):_
-
-- _The data format requirements; if there is a need to reformat data before they are transmitted or after incoming data is received, tools and/or methods for the reformat process should be defined_
-- _Specifications for hand-shaking protocols between the two systems; include the content and format of the information to be included in the hand-shake messages, the timing for exchanging these messages, and the steps to be taken when errors are identified_
-- _Format(s) for error reports exchanged between the systems; should address the disposition of error reports; for example, retained in a file, sent to a printer, flag/alarm sent to the operator, etc._
-- _Graphical representation of the connectivity between systems, showing the direction of data flow_
-- _Query and response descriptions_<br>
-
-_If a formal Interface Control Document (ICD) exists for a given interface, the information can be copied, or the ICD can be referenced in this section._
+All external communication is REST based and it is be described in the [API documentation](application-program-interface.md) for each version, once it is deployed.
 
 ### 7. SYSTEM INTEGRITY CONTROLS
 
-_Sensitive systems use information for which the loss, misuse, modification of, or unauthorized access to that information could affect the conduct of State programs, or the privacy to which individuals are entitled._<br>
+Developers of sensitive State systems are required to develop specifications for the following minimum levels of control:
 
-_Developers of sensitive State systems are required to develop specifications for the following minimum levels of control:_
-
-- _Internal security to restrict access of critical data items to only those access types required by users_
-- _Audit procedures to meet control, reporting, and retention period requirements for operational and management reports_
-- _Application audit trails to dynamically audit retrieval access to designated critical data_
-- _Standard Tables to be used or requested for validating data fields_
-- _Verification processes for additions, deletions, or updates of critical data_
-
-_Ability to identify all audit information by user identification, network terminal identification, date, time, and data accessed or changed._
+- Internal security to restrict access of critical data items to only those access types required by users (passwords, credit cards, personal information etc.)
+- Standard Tables to be used or requested for validating data fields
+- Verification processes for additions, deletions, or updates of critical data
+- Ability to identify all audit information by user identification, network terminal identification, date, time, and data accessed or changed
