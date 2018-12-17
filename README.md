@@ -1,9 +1,7 @@
 # Eats Easy
 
 ### 1. Introduction
-EatsEasy is a system that connects clients and restaurants. It helps clients to find the place to eat in,
-fastly, to place the order and track it from anywhere, and to pay instantly. It helps restaurant’s staff to
-manage the queues of orders, to keep the menu updated and to serve clients the best way they can
+EatsEasy is a system that connects clients and restaurants. It helps clients to find the place to eat in, fastly, to place the order and track it from anywhere, and to pay instantly. It helps restaurant’s staff to manage the queues of orders, to keep the menu updated and to serve clients the best way they can
 ### 2. Project Description
 **The abilities that EatsEasy provides to the clients:**
 - Flexibility: Using EatsEasy the client can search where and what he wants to eat, depending on
