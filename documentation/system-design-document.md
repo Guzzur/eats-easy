@@ -80,74 +80,110 @@ The management, design, development, configuration, quality assurance and integr
 
 ### 2. SYSTEM ARCHITECTURE
 
-_In this section, describe the system and/or subsystem(s) architecture for the project. References to external entities should be minimal, as they will be described in detail in Section 6, External Interfaces._
-
 #### 2.1 System Hardware Architecture
 
 _In this section, describe the overall system hardware and organization. Include a list of hardware components (with a brief description of each item) and diagrams showing the connectivity between the components. If appropriate, use subsections to address each subsystem._
 
 #### 2.2 System Software Architecture
 
-_In this section, describe the overall system software and organization. Include a list of software modules (this could include functions, subroutines, or classes), computer languages, and programming computer-aided software engineering tools (with a brief description of the function of each item). Use structured organization diagrams/object-oriented diagrams that show the various segmentation levels down to the lowest level. All features on the diagrams should have reference numbers and names. Include a narrative that expands on and enhances the understanding of the functional breakdown. If appropriate, use subsections to address each module._<br>
-_Note: The diagrams should map to the FRD data flow diagrams, providing the physical process and data flow related to the FRD logical process and data flow._
+- Java Spring Boot based REST API server and microservices [backend]
+  - Spring MVC (Spring's contender of JSF)
+  - Tomcat Java Servlet
+  - Maven Dependency Manager
+  - JavaBeans functionality
+  - PostgreSQL for our Relational Database
+  - XML configuration
+- Android app with React Native for the eater [frontend]
+- Android app with React Native for the staff [frontend]
 
 #### 2.3 Internal Communications Architecture
 
-_In this section, describe the overall communications within the system; for example, LANs, buses, etc. Include the communications architecture(s) being implemented, such as X.25, Token Ring, etc. Provide a diagram depicting the communications path(s) between the system and subsystem modules. If appropriate, use subsections to address each architecture being employed._<br>
-
-_Note: The diagrams should map to the FRD context diagrams._
+All internal communication is REST based and it is be described in the [API documentation](application-program-interface.md) for each version, once it is deployed.
 
 ### 3. FILE AND DATABASE DESIGN
 
-_Interact with the Database Administrator (DBA) when preparing this section. The section should reveal the final design of all database management system (DBMS) files and the non-DBMS files associated with the system under development. Additional information may add as required for the particular project. Provide a comprehensive data dictionary showing data element name, type, length, source, validation rules, maintenance (create, read, update, delete (CRUD) capability), data stores, outputs, aliases, and description. Can be included as an appendix._
+Data dictionary:
+
+- C - create
+- R - read
+- U - update
+- D - delete
 
 #### 3.1 Database Management System Files
 
-_This section reveals the final design of the DBMS files and includes the following information, as appropriate (refer to the data dictionary):_
+We use PosgreSQL (through Heroku) for our Database
 
-- _Refined logical model; provide normalized table layouts, entity relationship diagrams, and other logical design information_
-- _A physical description of the DBMS schemas, sub-schemas, records, sets, tables, storage page sizes, etc._
-- _Access methods (such as indexed, via set, sequential, random access, sorted pointer array, etc.)_
-- _Estimate of the DBMS file size or volume of data within the file, and data pages, including overhead resulting from access methods and free space_
-- _Definition of the update frequency of the database tables, views, files, areas, records, sets, and data pages; estimate the number of transactions if the database is an online transaction-based system_
+##### Users' data access<sup>\*</sup>:
+
+| Table name        | Eaters | Staff |
+| ----------------- | ------ | ----- |
+| Ingredients       | R      | CRUD  |
+| Restaurants       | R      | RU    |
+| Credit cards      | CRUD   |       |
+| Ingredients type  | R      | R     |
+| Restaurants type  | R      | R     |
+| Dishes            | R      | CRUD  |
+| Tables            | R      | CRUD  |
+| Shifts            |        | CRUD  |
+| Stock ingredients |        | CRUD  |
+| Users             | CRUD   | R     |
+| Roles             |        | CRUD  |
+| Dish ingredients  | R      | CRUD  |
+| Dishes type       | R      | R     |
+| Employees         |        | CRUD  |
+| Orders            | CRUD   | RU    |
+| Calls for waiter  | CRUD   | RUD   |
+| Payments          | CRUD   | R     |
+| Calls resolved    | R      | CRUD  |
+| Order items       | CRUD   | CRUD  |
+| Working           |        | CRUD  |
+
+---
+
+<sub><sup>\* - additional access check per item may apply</sup></sub>
+
+---
+
+##### Entity Relationship Diagram (ERD) ([enlarge](images/eats-easy-erd-v1.6.png))
+
+[![ERD](images/eats-easy-erd-v1.6.png)](<(images/eats-easy-erd-v1.6.png)>)
+
+##### Relational Schema (RS) ([enlarge](images/eats-easy-rs-v1.6.png))
+
+[![ERD](images/eats-easy-rs-v1.6.png)](<(images/eats-easy-erd-v1.6.png)>)
 
 #### 3.2 Non-Database Management System Files
 
-_In this section, provide the detailed description of all non-DBMS files and include a narrative description of the usage of each file—including if the file is used for input, output, or both; if this file is a temporary file; an indication of which modules read and write the file, etc.; and file structures (refer to the data dictionary). As appropriate, the file structure information should:_
-
-- _Identify record structures, record keys or indexes, and reference data elements within the records_
-- _Define record length (fixed or maximum variable length) and blocking factors_
-- _Define file access method—for example, index sequential, virtual sequential, random access, etc._
-- _Estimate the file size or volume of data within the file, including overhead resulting from file access methods_
-- _Define the update frequency of the file; if the file is part of an online transaction-based system, provide the estimated number of transactions per unit time, and the statistical mean, mode, and distribution of those transactions_
+- **Logs** - log files will be written on the Java Spring Server and stored as local. Every month (or when data size quotta is exceeded) the oldest files will be deleted. Only the connected to the machine (container) users will be able to read/write/delete these files manually and only for debugging purposes
+- **Images** - dishes' pictures as well as restaurant exterior and interior pictures will be stored at the Server too. Each request for restaurant and/or dish will supply a global URL to the file which is stored in folder with public access
 
 ### 4. HUMAN-MACHINE INTERFACE
 
-_This section provides the detailed design of the system and subsystem inputs and outputs relative to the user/operator. Any additional information may be added to this section and may be organized according to whatever structure best presents the operator input and output designs. Depending on the particular nature of the project, it may be appropriate to repeat these sections at both the subsystem and design module levels. Additional information may be added to the subsections if the suggested lists are inadequate to describe the project inputs and outputs._
+#### 4.1 Inputs/outputs
 
-#### 4.1 Inputs
+##### An eater can interact with the system using the following GUI:
 
-_This section is a description of the input media used by the operator for providing information to the system; show a mapping to the high-level data flows described in Section 1.2.1, System Overview. For example, data entry screens, optical character readers, bar scanners, etc. If appropriate, the input record types, file structures, and database structures provided in Section 3, File and Database Design, may be referenced. Include data element definitions, or refer to the data dictionary._<br>
+1. Restaurant search screen – this is the starting eater screen, where he can search for a particular restaurant, either by using it's full name, or by searching for restaurants through a particular filter, for instance he could search for all restaurants with a Japanese cuisine
 
-_Provide the layout of all input data screens or graphical user interfaces (GUIs) (for example, windows). Provide a graphic representation of each interface. Define all data elements associated with each screen or GUI, or reference the data dictionary._<br>
+2. Restaurant info screen – after choosing a restaurant the user is presented with a screen that gives him information about the restaurant, including a menu and an option to reserve a table assuming there are available tables in real time
 
-_This section should contain edit criteria for the data elements, including specific values, range of values, mandatory/optional, alphanumeric values, and length. Also address data entry controls to prevent edit bypassing._<br>
+3. "While at restaurant" screen – this is the screen the eater sees after making a reservation. Here he is presented with the following buttons:
 
-_Discuss the miscellaneous messages associated with operator inputs, including the following:_
+   - "Place an order" - leads to another screen
+   - "Payment" - leads to another screen
+   - "Call a waiter" - registers a call in the DB and the restaurant workers UI. In addition after placing an order, the items ordered are presented in this screen
 
-- _Copies of form(s) if the input data are keyed or scanned for data entry from printed forms_
-- _Description of any access restrictions or security considerations_
-- _Each transaction name, code, and definition, if the system is a transaction-based processing system_
+4. Order placement screen – the user sees this when he presses the "Place an order" button, he gets a screen with the menu and can add items to his order and click "Place order" when he is finished
 
-#### 4.2 Outputs
+5. Payment screen – the user sees this when he presses the "Pay" button, he is then prompted with a screen asking him for the relevant payment information
 
-_This section describes of the system output design relative to the user/operator; show a mapping to the high-level data flows described in Section 1.2.1. System outputs include reports, data display screens and GUIs, query results, etc. The output files are described in Section 3 and may be referenced in this section. The following should be provided, if appropriate:_
+##### A restaurant worker can interact with the app using the following GUI:
 
-- _Identification of codes and names for reports and data display screens_
-- _Description of report and screen contents (provide a graphic representation of each layout and define all data elements associated with the layout or reference the data dictionary)_
-- _Description of the purpose of the output, including identification of the primary users_
-- _Report distribution requirements, if any (include frequency for periodic reports)_
-- _Description of any access restrictions or security considerations_
+1. Open orders screen – in this screen the workers can see the open orders and update their status. When the chef presses the "ready" button, the status of the order changes from "in preparation" to "ready". Then a waiter would deliver the order to the eater and press the "delivered" button, changing the order status to "delivered". After the eater pays for his meal, the order would disappear from this screen.
+
+2. Open calls screen - in this screen the worker is able to browse all the calls for service that have been openned by eaters and update their statuses after changes are done
+
+3. Edit menu screen – here a worker (with the right permission) can add or remove dishes from the menu.
 
 ### 5. DETAILED DESIGN
 
@@ -168,7 +204,7 @@ In order to succesfully run the Main Server, the application hosting service ser
 
 For a local development and/or testing, any computer with similar characteristics is required.<br>
 
-In order to succesfully run the clients Apps, the Smartphone/Tablet shall have these (or higher) abilities/details:
+In order to succesfully run the clients' Apps, the Smartphone/Tablet shall have these (or higher) abilities/details:
 
 - Have a proper internet connection (cellular or Wi-Fi)
 - Run V4.0+ Android Operating System
@@ -177,27 +213,43 @@ In order to succesfully run the clients Apps, the Smartphone/Tablet shall have t
 - Have a screen resolution of 1280\*720 pixels or higher
 - Have a functional touch and drag screen
 
-#### 5.2 Software Detailed Design
+#### 5.2 Action/logic flow
 
-_A software module is the lowest level of design granularity in the system. Depending on the software development approach, there may be one or more modules per system. This section should provide enough detailed information about logic and data necessary to completely write source code for all modules in the system (and/or integrate COTS software programs)._<br>
-_If there are many modules or if the module documentation is extensive, place it in an appendix or reference a separate document. Add additional diagrams and information, if necessary, to describe each module, its functionality, and its hierarchy. Industry-standard module specification practices should be followed. Include the following information in the detailed module designs:_
+Signs used in this section:
 
-- _A narrative description of each module, its function(s), the conditions under which it is used (called or scheduled for execution), its overall processing, logic, interfaces to other modules, interfaces to external systems, security requirements, etc.; explain any algorithms used by the module in detail_
-- _For COTS packages, specify any call routines or bridging programs to integrate the package with the system and/or other COTS packages (for example, Dynamic Link Libraries)_
-- _Data elements, record structures, and file structures associated with module input and output_
-- _Graphical representation of the module processing, logic, flow of control, and algorithms, using an accepted diagramming approach (for example, structure charts, action diagrams, flowcharts, etc.)_
-- _Data entry and data output graphics; define or reference associated data elements; if the project is large and complex or if the detailed module designs will be incorporated into a separate document, then it may be appropriate to repeat the screen information in this section_
-- _Report layout_
+![](images/flow/map.png)
 
-#### 5.3 Internal Communications Detailed Design
+##### Find restaurant
 
-_If the system includes more than one component there may be a requirement for internal communications to exchange information, provide commands, or support input/output functions. This section should provide enough detailed information about the communication requirements to correctly build and/or procure the communications components for the system. Include the following information in the detailed designs (as appropriate):_
+[![](images/flow/find-restaurant.png)](images/flow/find-restaurant.png)
 
-- _The number of servers and clients to be included on each area network_
-- _Specifications for bus timing requirements and bus control_
-- _Format(s) for data being exchanged between components_
-- _Graphical representation of the connectivity between components, showing the direction of data flow (if applicable), and approximate distances between components; information should provide enough detail to support the procurement of hardware to complete the installation at a given location_
-- _LAN topology_
+##### Order lifecycle, part I
+
+[![](images/flow/order-lifecycle-1.png)](images/flow/order-lifecycle-1.png)
+
+##### Order lifecycle, part II
+
+[![](images/flow/order-lifecycle-2.png)](images/flow/order-lifecycle-2.png)
+
+##### Payment - credit card
+
+[![](images/flow/payment.png)](images/flow/payment.png)
+
+##### Payment - via waiter (cash or credit card)
+
+[![](images/flow/payment-waiter.png)](images/flow/payment-waiter.png)
+
+##### Call for service
+
+[![](images/flow/call-for-service.png)](images/flow/call-for-service.png)
+
+##### Manage dishes
+
+[![](images/flow/manage-dishes.png)](images/flow/manage-dishes.png)
+
+##### Manage ingredients
+
+[![](images/flow/manage-ingredients.png)](images/flow/manage-ingredients.png)
 
 ### 6. EXTERNAL INTERFACES
 
@@ -232,75 +284,3 @@ _Developers of sensitive State systems are required to develop specifications fo
 - _Verification processes for additions, deletions, or updates of critical data_
 
 _Ability to identify all audit information by user identification, network terminal identification, date, time, and data accessed or changed._
-
-# Ron
-
-2. system software:
-
-- Java Spring Boot based REST API server and microservices [backend]
-  - Spring MVC (Spring&#39;s contender of JSF)
-  - Tomcat Java Servlet
-  - Maven Dependency Manager
-  - JavaBeans functionality
-  - Postgresql for our Relational Database
-  - XML configuration
-- Android app with React Native for the eater [frontend]
-- Android app with React Native for the staff [frontend]
-
-3. we use posgresql (through Heroku) for our DB
-
-- ERD pic
-
-- schema pic
-
-The following tables can be changed by an eaters action:
-
-Orders (C, U)
-
-Payments (C,U)
-
-tables (U)
-
-Calls for waiter (C)
-
-Order items (C)
-
-Credit cards (C)
-
-The following tables can be changed by a restaurant worker:
-
-Orders (U)
-
-Dishes (C)
-
-Shifts (C)
-
-Calls resolved (C)
-
-Working (C)
-
-4. human machine interface:
-
-An eater can interact with the app using the following GUI:
-
-1. 1)Restaurant search GUI – this is the starting eater screen, where he can search for a particular restaurant, either by using
-   it's full name, or by searching for restaurants through a particular filter, for instance he could search for all restaurants
-   with a Japanese cuisine.
-2. 2)Restaurant info screen GUI – after choosing a restaurant the user is presented with a GUI that gives him information about the
-   restaurant, including a menu and an option to reserve a table assuming there are available tables in real time.
-3. 3. "while at restaurant" GUI – this is the GUI the eater sees after making a reservation. here he is presented with the following
-      buttons: "place an order"; which leads to another GUI screen. "payment" which again leads to another GUI screen.
-      And "call a waite" which registers a call in the DB and the restaurant workers GUI. In addition after placing an order,
-      the items ordered are presented in this screen.
-4. 4)Order placement GUI – the user sees this when he presses the "place an order" button, he gets a screen with the menu and can add
-   items to his order and click "place order" when he is finished.
-5. 5)Payment GUI – the user sees this when he presses the "pay" button, he is then prompted with a screen asking him for the
-   relevant payment information.
-
-A restaurant worker can interact with the app using the following GUI:
-
-1. 1)Open orders screen – int his screen the workers can see the open orders and update their status. When the chef presses the
-   "ready" button, the status of the order changes from "in preparation" to "ready". Then a waiter would deliver the order
-   to the eater and press the "delivered" button, changing the order status to "delivered". After the eater pays for his meal,
-   the order would disappear from this screen.
-2. 2)Change menu GUI – here a worker (with the right permission) can add or remove dishes from the menu.
