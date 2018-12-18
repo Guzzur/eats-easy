@@ -129,7 +129,7 @@ We use PosgreSQL (through Heroku) for our Database
 | Users             | CRUD   | R     |
 | Roles             |        | CRUD  |
 | Dish ingredients  | R      | CRUD  |
-| Dishes type       | R      | R     |
+| Dishes type       | R      | CRUD  |
 | Employees         |        | CRUD  |
 | Orders            | CRUD   | RU    |
 | Calls for waiter  | CRUD   | RUD   |
