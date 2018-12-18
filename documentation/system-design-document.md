@@ -217,7 +217,7 @@ In order to succesfully run the clients' Apps, the Smartphone/Tablet shall have 
 
 Signs used in this section:
 
-[![](images/flow/map.PNG)](images/flow/map.PNG)
+[![](images/flow/map.png)](images/flow/map.png)
 
 ##### Find restaurant
 
