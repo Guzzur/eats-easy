@@ -12,7 +12,7 @@ This Software Design Description (SDD) describes the detailed structure of the c
 
 #### 1.2 Project Executive Summary
 
-The Goal of the project is to design and develop an easy-to-use system that is possible to help people to find tasty food, near to his location and according to his tastes.<br>
+The Goal of the project is to design and develop an easy-to-use system that helps people find tasty food, near their location and according to their tastes.<br>
 
 The documentation, development and testing processes shall end before February 2019.<br>
 
@@ -27,15 +27,15 @@ Project milestones:
 - API documentation
 - Web page, production deployment etc.
 
-Nearly all of technologies that are going to be used in the Project are new to a team. The learning curve may lead to a risk to stand with fully working starting setup on time. Another risk is the fact that all team members are partly "employed" in this project, which also may lead to another delays of deployment of milestones' versions.<br>
+Nearly all of technologies that are going to be used in the Project are new for the team. The learning curve may lead to a risk in having a fully working starting setup on time. Another risk is the fact that all team members are partly "employed" in this project, which also may lead to other delays in deployment of milestones' versions.<br>
 
-Project's mitigation/enhancement plan is to reduce the unnecessary parts of the Project to minimum and to concentrate on the main/core parts of the System up to the Testing phase.<br>
+Project's mitigation/enhancement plan is to reduce the unnecessary parts of the Project to a minimum and to concentrate on the main/core parts of the System up to the Testing phase.<br>
 
-In the future, the System will be ready to next stage development up to the stage where it can be used by actual clients.
+In the future, the System will be ready for next stage development up to the stage where it can be used by actual clients.
 
 #### 1.2.1 System Overview
 
-The Eats Easy is a system that helps its clients to find a place that offers a food he want fast and easy. It also allows to book a table, order a take-away or sit-inside without phisically being and/or interacting with restaurant staff.<br>
+The Eats Easy is a system that helps its clients to find a place that offers the food they want fast and easy. It also allows to book a table, order a take-away or sit-inside without physically being and/or interacting with restaurant staff.<br>
 The system consists of a Remote Main Server (hosted at Heroku for this moment), the Eaters App and the Staff App.<br>
 
 _It should provide a high-level system architecture diagram showing a subsystem breakout of the system, if applicable._<br>
@@ -48,7 +48,7 @@ The project does not have any constraints or conflicts with other system due to 
 
 #### 1.2.3 Future Contingencies
 
-In next stages of development some independent services and APIs may be involved, such as network security service using SSL, payment services' APIs, map and advertising APIs and more. All these are irrelevant for current projectal stage, which desing is described in this document.
+In next stages of development some independent services and APIs may be involved, such as network security service using SSL, payment services' APIs, map and advertising APIs and more. All these are irrelevant for current projectal stage, whose design is described in this document.
 
 #### 1.3 Document Organization
 
@@ -56,7 +56,7 @@ This document describes the design of each part of the system, what it does, how
 
 #### 1.4 Points of Contact
 
-The management, design, development, configuration, quality assurance and integration team is consists of these members:
+The management, design, development, configuration, quality assurance and integration team consists of these members:
 
 - Ron Yanku ([Github](https://github.com/ronyanku))
 - Felix Razikov ([Github](https://github.com/guzzur))
@@ -154,7 +154,7 @@ We use PosgreSQL (through Heroku) for our Database
 
 #### 3.2 Non-Database Management System Files
 
-- **Logs** - log files will be written on the Java Spring Server and stored as local. Every month (or when data size quotta is exceeded) the oldest files will be deleted. Only the connected to the machine (container) users will be able to read/write/delete these files manually and only for debugging purposes
+- **Logs** - log files will be written on the Java Spring Server and stored as local. Every month (or when data size quota is exceeded) the oldest files will be deleted. Only users connected to the machine (container) will be able to read/write/delete these files manually and only for debugging purposes
 - **Images** - dishes' pictures as well as restaurant exterior and interior pictures will be stored at the Server too. Each request for restaurant and/or dish will supply a global URL to the file which is stored in folder with public access
 
 ### 4. HUMAN-MACHINE INTERFACE
@@ -200,7 +200,7 @@ In order to succesfully run the Main Server, the application hosting service ser
 - Have the automatic "on push" build and deploy ability
 - Have an authorized connection to the Github project's repositories
 - Run Postgres Database Server V4.0
-- Have a proper ports enabled for accepting HTTP requests
+- Have proper ports enabled for accepting HTTP requests
 
 For a local development and/or testing, any computer with similar characteristics is required.<br>
 
