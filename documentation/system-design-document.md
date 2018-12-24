@@ -38,10 +38,6 @@ In the future, the System will be ready for next stage development up to the sta
 The Eats Easy is a system that helps its clients to find a place that offers the food they want fast and easy. It also allows to book a table, order a take-away or sit-inside without physically being and/or interacting with restaurant staff.<br>
 The system consists of a Remote Main Server (hosted at Heroku for this moment), the Eaters App and the Staff App.<br>
 
-_It should provide a high-level system architecture diagram showing a subsystem breakout of the system, if applicable._<br>
-
-_The high-level system architecture or subsystem diagrams should, if applicable, show interfaces to external systems._
-
 #### 1.2.2 Design Constraints
 
 The project does not have any constraints or conflicts with other system due to its standalone-ness and self-sufficiency.
@@ -81,8 +77,6 @@ The management, design, development, configuration, quality assurance and integr
 ### 2. SYSTEM ARCHITECTURE
 
 #### 2.1 System Hardware Architecture
-
-_In this section, describe the overall system hardware and organization. Include a list of hardware components (with a brief description of each item) and diagrams showing the connectivity between the components. If appropriate, use subsections to address each subsystem._
 
 #### 2.2 System Software Architecture
 
