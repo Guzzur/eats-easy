@@ -71,10 +71,10 @@ CREATE TABLE Users_credit_cards
 )
 /* -------------------------------------------------- */
 /* ORDER */
-CREATE TABLE Orders
+CREATE TABLE OrdersData
 (
   order_id SERIAL,
-  status VARCHAR NOT NULL,
+  order_status VARCHAR NOT NULL,
   time_received DATE NOT NULL,
   time_delivered DATE NOT NULL,
   table_id INT NOT NULL,
@@ -93,7 +93,7 @@ CREATE TABLE Order_items
   subtotal INT NOT NULL,
   PRIMARY KEY (order_id),
   FOREIGN KEY (dish_id) REFERENCES Dishes(dish_id),
-  FOREIGN KEY (order_id) REFERENCES Orders(order_id)
+  FOREIGN KEY (order_id) REFERENCES OrdersData(order_id)
 );
 /* -------------------------------------------------- */
 /* CALL */
@@ -132,7 +132,7 @@ CREATE TABLE Payments
   rest_id INT NOT NULL,
   date_accepted DATE NOT NULL,
   PRIMARY KEY (payment_id, order_id),
-  FOREIGN KEY (order_id) REFERENCES Orders(order_id),
+  FOREIGN KEY (order_id) REFERENCES OrdersData(order_id),
   FOREIGN KEY (user_id) REFERENCES Users(user_id),
   FOREIGN KEY (rest_id) REFERENCES Restaurants(rest_id)
 );
