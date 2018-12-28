@@ -81,7 +81,7 @@ CREATE TABLE Orders
   rest_id INT NOT NULL,
   user_id INT NOT NULL,
   PRIMARY KEY (order_id, rest_id),
-  FOREIGN KEY (table_id) REFERENCES Tables(table_id),
+  FOREIGN KEY (table_id) REFERENCES TablesData(table_id),
   FOREIGN KEY (rest_id) REFERENCES Restaurants(rest_id),
   FOREIGN KEY (user_id) REFERENCES Users(user_id)
 );
@@ -106,7 +106,7 @@ CREATE TABLE Calls_for_waiter
   call_date DATE NOT NULL,
   user_id INT NOT NULL,
   PRIMARY KEY (call_id),
-  FOREIGN KEY (table_id) REFERENCES Tables(table_id),
+  FOREIGN KEY (table_id) REFERENCES TablesData(table_id),
   FOREIGN KEY (rest_id) REFERENCES Restaurants(rest_id),
   FOREIGN KEY (user_id) REFERENCES Users(user_id)
 );
@@ -138,7 +138,7 @@ CREATE TABLE Payments
 );
 /* -------------------------------------------------- */
 /* TABLE */
-CREATE TABLE Tables
+CREATE TABLE TablesData
 (
   table_id SERIAL,
   rest_id INT NOT NULL,
