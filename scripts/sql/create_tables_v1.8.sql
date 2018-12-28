@@ -6,7 +6,7 @@ CREATE TABLE Restaurants
   gps_lat FLOAT,
   gps_lon FLOAT,
   rest_address VARCHAR,
-  rest_type JSON,
+  rest_type VARCHAR,
   PRIMARY KEY (rest_id)
 );
 /* -------------------------------------------------- */
@@ -22,7 +22,7 @@ CREATE TABLE Dishes
   PRIMARY KEY (dish_id, rest_id),
   FOREIGN KEY (rest_id) REFERENCES Restaurants(rest_id)
 );
-CREATE TABLE Dishes_type
+CREATE TABLE Dishes_type /* NOT WORKING */
 (
   dish_id SERIAL,
   dish_type VARCHAR NOT NULL,
@@ -61,17 +61,27 @@ CREATE TABLE Roles
   PRIMARY KEY (role_id, user_id),
   FOREIGN KEY (user_id) REFERENCES Users(user_id)
 );
-CREATE TABLE Users_credit_cards
+CREATE TABLE Users_credit_cards /* NOT WORKING */
 (
   card_id INT NOT NULL,
   user_id INT NOT NULL,
-  PRIMARY KEY (card_id, user_id)
+  PRIMARY KEY (card_id, user_id),
   FOREIGN KEY (card_id) REFERENCES Credit_cards(card_id),
   FOREIGN KEY (user_id) REFERENCES Users(user_id)
-)
+);
+/* -------------------------------------------------- */
+/* TABLE */
+CREATE TABLE TablesData
+(
+  table_id SERIAL,
+  rest_id INT NOT NULL,
+  table_code_name VARCHAR,
+  PRIMARY KEY (table_id, rest_id),
+  FOREIGN KEY (rest_id) REFERENCES Restaurants(rest_id)
+);
 /* -------------------------------------------------- */
 /* ORDER */
-CREATE TABLE OrdersData
+CREATE TABLE OrdersData /* NOT WORKING */
 (
   order_id SERIAL,
   order_status VARCHAR NOT NULL,
@@ -85,7 +95,7 @@ CREATE TABLE OrdersData
   FOREIGN KEY (rest_id) REFERENCES Restaurants(rest_id),
   FOREIGN KEY (user_id) REFERENCES Users(user_id)
 );
-CREATE TABLE Order_items
+CREATE TABLE Order_items /* NOT WORKING */
 (
   order_id SERIAL,
   dish_id INT NOT NULL,
@@ -97,7 +107,7 @@ CREATE TABLE Order_items
 );
 /* -------------------------------------------------- */
 /* CALL */
-CREATE TABLE Calls_for_waiter
+CREATE TABLE Calls_for_waiter /* NOT WORKING */
 (
   call_id SERIAL,
   table_id INT NOT NULL,
@@ -110,7 +120,7 @@ CREATE TABLE Calls_for_waiter
   FOREIGN KEY (rest_id) REFERENCES Restaurants(rest_id),
   FOREIGN KEY (user_id) REFERENCES Users(user_id)
 );
-CREATE TABLE Calls_resolved
+CREATE TABLE Calls_resolved /* NOT WORKING */
 (
   call_resolve_id SERIAL,
   employee_id INT NOT NULL,
@@ -123,7 +133,7 @@ CREATE TABLE Calls_resolved
 );
 /* -------------------------------------------------- */
 /* PAYMENT */
-CREATE TABLE Payments
+CREATE TABLE Payments /* NOT WORKING */
 (
   payment_id SERIAL,
   amount FLOAT NOT NULL,
@@ -134,16 +144,6 @@ CREATE TABLE Payments
   PRIMARY KEY (payment_id, order_id),
   FOREIGN KEY (order_id) REFERENCES OrdersData(order_id),
   FOREIGN KEY (user_id) REFERENCES Users(user_id),
-  FOREIGN KEY (rest_id) REFERENCES Restaurants(rest_id)
-);
-/* -------------------------------------------------- */
-/* TABLE */
-CREATE TABLE TablesData
-(
-  table_id SERIAL,
-  rest_id INT NOT NULL,
-  table_code_name VARCHAR,
-  PRIMARY KEY (table_id, rest_id),
   FOREIGN KEY (rest_id) REFERENCES Restaurants(rest_id)
 );
 /* -------------------------------------------------- */
@@ -166,7 +166,7 @@ CREATE TABLE Shifts
   PRIMARY KEY (shift_id, rest_id),
   FOREIGN KEY (rest_id) REFERENCES Restaurants(rest_id)
 );
-CREATE TABLE Working
+CREATE TABLE Working /* NOT WORKING */
 (
   employee_id INT NOT NULL,
   shift_id INT NOT NULL,
