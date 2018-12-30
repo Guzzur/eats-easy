@@ -98,10 +98,10 @@ All internal communication is REST based and it is be described in the [API docu
 
 Data dictionary:
 
-- C - create
-- R - read
-- U - update
-- D - delete
+- C - Create
+- R - Read
+- U - Update
+- D - Delete
 
 #### 3.1 Database Management System Files
 
@@ -249,7 +249,7 @@ Signs used in this section:
 
 #### 6.1 Interface Architecture
 
-All external communication is REST based and it is be described in the [API documentation](application-program-interface.md) for each version, once it is deployed.
+All external communication is REST based and it is described in the [API documentation](application-program-interface.md) for each version, once it is deployed.
 
 ### 7. SYSTEM INTEGRITY CONTROLS
 
