@@ -40,8 +40,8 @@ Everyone who wants to be a part of modern era, where you don't need to wait for 
   - XML configuration
 - Android app with React Native for the client [frontend]
 - Android app with React Native for the staff [frontend]
-- React.js web UI for all who is interested to use this product in their business [landing pages, frontend]
-- React.js web UI for system administrator [dashboard, frontend]
+- React.js web UI for all who is interested to use this product in their business [landing pages, frontend] (optional)
+- React.js web UI for system administrator [dashboard, frontend] (optional)
 ### 5. Submitters
 * [Ron Yanku (RonYanku)](https://github.com/RonYanku)
 * [Felix Razikov (Guzzur)](https://github.com/Guzzur)
