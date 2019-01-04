@@ -52,7 +52,7 @@ This document describes the design of each part of the system, what it does, how
 
 #### 1.4 Points of Contact
 
-The management, design, development, configuration, quality assurance and integration team consists of these members:
+The management, design, documentation, development, configuration, quality assurance and integration team consists of these members:
 
 - Ron Yanku ([Github](https://github.com/ronyanku))
 - Felix Razikov ([Github](https://github.com/guzzur))
