@@ -1,1 +1,0 @@
-# EatsEasy API documentation
