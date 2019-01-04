@@ -48,7 +48,7 @@ In next stages of development some independent services and APIs may be involved
 
 #### 1.3 Document Organization
 
-This document describes the design of each part of the system, what it does, how it is connected etc. Also it provides a detailed "drill down" review of files and data design, as well as the Human Interface design and more.
+This document describes the design of each part of the system, what it does, how every part is connected, what the action flows the system have etc.
 
 #### 1.4 Points of Contact
 
