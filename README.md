@@ -56,4 +56,5 @@ Everyone who wants to be a part of modern era, where you don't need to wait for 
     * [Backend (Java Spring Boot based API)](https://github.com/eats-easy/eats-easy-spring)
     * [Clients' Android app (React Native based)](https://github.com/eats-easy/eats-easy-eaters-app)
     * [Staff's Android app (React Native based)](https://github.com/eats-easy/eats-easy-staff-app)
-    * [Web UI (React.js based)](https://github.com/eats-easy/eats-easy-web)
+    * Dashboard (React.js based) (TBD)
+    * Product landing pages (React.js based) (TBD)
