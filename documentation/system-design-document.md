@@ -63,7 +63,7 @@ The management, design, documentation, development, configuration, quality assur
 - Documentation repository ([Github](https://github.com/eats-easy/eats-easy-doc))
   - Project Proposal Document ([Link](eats-easy-proposal.pdf))
   - Flow Charts Document ([Link](eats-easy-flow-charts.pdf))
-  - Application Program Interface (API) Description Document ([Link](application-program0interface.md))
+  - Application Program Interface (API) Description Document ([Link](https://documenter.getpostman.com/view/5411046/RznBMKem))
 - Main Server repository ([Github](https://github.com/eats-easy/eats-easy-spring))
 - Eaters App repository ([Github](https://github.com/eats-easy/eats-easy-eaters))
 - Staff App repository ([Github](https://github.com/eats-easy/eats-easy-staff))
@@ -249,7 +249,7 @@ Signs used in this section:
 
 #### 6.1 Interface Architecture
 
-All external communication is REST based and it is described in the [API documentation](application-program-interface.md) for each version, once it is deployed.
+All external communication is REST based and it is described in the [API documentation](https://documenter.getpostman.com/view/5411046/RznBMKem) for each version, once it is deployed.
 
 ### 7. SYSTEM INTEGRITY CONTROLS
 
