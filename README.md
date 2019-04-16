@@ -50,7 +50,7 @@ Everyone who wants to be a part of modern era, where you don't need to wait for 
   * [Issues](/issues)
   * [System Proposal (obsolete)](/documentation/eats-easy-proposal.pdf)
   * [System Design Document](/documentation/system-design-document.md)
-  * [API Documentation](https://documenter.getpostman.com/view/6521609/S1EJY1pC)
+  * [API Documentation](https://documenter.getpostman.com/view/6521609/S1EQTyQ4)
   * Repositories
     * [Documentation](/)
     * [Backend (Java Spring Boot based API)](https://github.com/eats-easy/eats-easy-spring)
