@@ -63,7 +63,7 @@ The management, design, documentation, development, configuration, quality assur
 - Documentation repository ([Github](https://github.com/eats-easy/eats-easy-doc))
   - Project Proposal Document ([Link](eats-easy-proposal.pdf))
   - Flow Charts Document ([Link](eats-easy-flow-charts.pdf))
-  - Application Program Interface (API) Description Document ([Link](https://documenter.getpostman.com/view/5411046/RznBMKem))
+  - Application Program Interface (API) Description Document ([Link](https://documenter.getpostman.com/view/6521609/S1EQTyQ4))
 - Main Server repository ([Github](https://github.com/eats-easy/eats-easy-spring))
 - Eaters App repository ([Github](https://github.com/eats-easy/eats-easy-eaters))
 - Staff App repository ([Github](https://github.com/eats-easy/eats-easy-staff))
