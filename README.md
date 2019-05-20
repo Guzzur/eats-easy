@@ -52,7 +52,7 @@ Everyone who wants to be a part of modern era, where you don't need to wait for 
   * [System Design Document](/documentation/system-design-document.md)
   * [API Documentation](https://documenter.getpostman.com/view/6521609/S1EQTyQ4)
   * Repositories
-    * [Documentation](/)
+    * [Documentation](https://github.com/eats-easy/eats-easy-doc)
     * [Backend (Java Spring Boot based API)](https://github.com/eats-easy/eats-easy-spring)
     * [Clients' Android app (React Native based)](https://github.com/eats-easy/eats-easy-eaters-app)
     * [Staff's Android app (React Native based)](https://github.com/eats-easy/eats-easy-staff-app)
