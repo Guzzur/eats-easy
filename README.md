@@ -26,9 +26,8 @@ preferences and workload
 - Serviceability: The client can press a button if he has any questions, and his waiter would
 receive a notice. No more begging for service and fishing the waiter’s attention
 - Management: Plenty of useful real time graphs and data summaries for the business staff
-### 3. Audience
-Everyone who wants to be a part of modern era, where you don't need to wait for any interraction with human beigns in order to get some tasty food
-### 4. System Structure
+
+### 3. System Structure
 - Java Spring Boot based REST API server and microservices [backend]
   - Spring MVC (Spring’s contender of JSF)
   - Tomcat Java Servlet
@@ -42,11 +41,8 @@ Everyone who wants to be a part of modern era, where you don't need to wait for 
 - Android app with React Native for the staff [frontend]
 - React.js web UI for all who is interested to use this product in their business [landing pages, frontend] (optional)
 - React.js web UI for system administrator [dashboard, frontend] (optional)
-### 5. Submitters
-* [Ron Yanku (RonYanku)](https://github.com/RonYanku)
-* [Felix Razikov (Guzzur)](https://github.com/Guzzur)
 
-### 6. Links
+### 4. Links
   * [Issues](/issues)
   * [System Proposal (obsolete)](/documentation/eats-easy-proposal.pdf)
   * [System Design Document](/documentation/system-design-document.md)
@@ -58,3 +54,10 @@ Everyone who wants to be a part of modern era, where you don't need to wait for 
     * [Staff's Android app (React Native based)](https://github.com/eats-easy/eats-easy-staff-app)
     * Dashboard (React.js based) (TBD)
     * Product landing pages (React.js based) (TBD)
+    
+### 5. Audience
+Everyone who wants to be a part of modern era, where you don't need to wait for any interraction with human beigns in order to get some tasty food
+
+### 6. Submitters
+* [Ron Yanku (RonYanku)](https://github.com/RonYanku)
+* [Felix Razikov (Guzzur)](https://github.com/Guzzur)
